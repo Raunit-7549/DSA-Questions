@@ -1,9 +1,9 @@
 # DSA-Questions
 
-This repo is made for my practice and revision of Data Structures and Algorithms.
+A revision log for revising the questions I have done on the different topic in Data Structures and Algorithms.
 
 | Topic | Total Solved |
-| --- | --- |
+| :--- | :---: |
 |Sorting|7|
 |Arrays|1|
 
