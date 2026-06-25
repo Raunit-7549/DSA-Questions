@@ -5,5 +5,4 @@ A revision log for revising the questions I have done on the different topic in 
 | Topic | Total Solved |
 | :--- | :---: |
 |Sorting|7|
-|Arrays|10|
-
+|Arrays|11|
