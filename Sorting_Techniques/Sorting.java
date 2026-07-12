@@ -8,9 +8,10 @@ public class Sorting {
         System.out.println(Arrays.toString(arr));
     }
 
+    //Selection Sort
+
+    // It is done by finding the smallest element then taking it at the start of the array.
     public static void SelectionSort(int[] arr) {
-        // It is done by finding the smallest element then taking it at the start of the
-        // array
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
@@ -25,8 +26,11 @@ public class Sorting {
         }
     }
 
+    // Bubble Sort
+
+    // It is done by taking the largest element to the end of the array.
+
     public static void BubbleSort(int[] arr) {
-        // It is done by taking the largest element to the end of the array
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             int didSwap = 0;
@@ -44,10 +48,10 @@ public class Sorting {
         }
     }
 
+    // Insertion Sort
+
+    // It is done by firstly taking a small part of the array and putting the elments in its correct position and then increasing the size of the small part untill the array is sorted.
     public static void InsertionSort(int[] arr) {
-        // It is done by firstly taking a small part of the array and putting the
-        // elments in its correct position and then increasing the size of the small
-        // part untill the array is sorted
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             int j = i;
@@ -61,9 +65,10 @@ public class Sorting {
         }
     }
 
+    //Merge Sort
+    
+    // It is done by breaking the array into smaller and smaller pieces and then merging each piece in the correct order untill it returns the sorted array.
     public static void MergeSort(int[] arr, int low, int high) {
-        // It is done by breaking the array into smaller and smaller pieces and then
-        // merging each piece in the correct order untill it returns the sorted array
         if (low >= high) {
             return;
         }
@@ -75,11 +80,8 @@ public class Sorting {
         Merge(arr, low, mid, high);
     }
 
+    // It is done by making a temporaray integer list and then adding the numbers in the right order into the list using while loop and then using the temp list sorted elements are placed in the array untill the two parts of the array taken get merged.
     public static void Merge(int[] arr, int low, int mid, int high) {
-        // It is done by making a temporaray integer list and then adding the numbers in
-        // the right order into the list using while loop and then using the temp list
-        // sorted elements are placed in the array untill the two parts of the array
-        // taken get merged
         List<Integer> temp = new ArrayList<>();
         int left = low;
         int right = mid + 1;
@@ -105,9 +107,10 @@ public class Sorting {
         }
     }
 
+    // Recursive Bubble Sort
+    
+    // It is done by using recursion for the outer loop and by using didswap we can check if the array is already sorted and we can stop the function.
     public static int[] RecursiveBubbleSort(int[] arr, int i) {
-        // It is done by using recursion for the outer loop and by using didswap we can
-        // check if the array is already sorted and we can stop the function
         int n = arr.length;
         if (i == n) {
             return arr;
@@ -127,10 +130,10 @@ public class Sorting {
         return RecursiveBubbleSort(arr, i + 1);
     }
 
+    // Recursive Insertion Sort
+
+    // It is done by using recursion for the outer loop and then sorting small parts of the array using the while loop and then increasing the size of part of the array taken untill it is sorted.
     public static int[] RecursiveInsertionSort(int[] arr, int i) {
-        // It is done by using recursion for the outer loop and then sorting small parts
-        // of the array using the while loop and then increasing the size of part of the
-        // array taken untill it is sorted
         int n = arr.length;
         if (i == n) {
             return arr;
@@ -145,8 +148,10 @@ public class Sorting {
         return RecursiveInsertionSort(arr, i + 1);
     }
 
+    // Quick Sort
+    
+    // It is done taking a pivot then placing it at its correct place then divding the array then smaller on the left greater on the right and then diving those parts and placing elements at their correct place using the parts of the arrays untill we get the sorted array.
     public static void QuickSort(int[] arr, int low, int high) {
-        // It is done taking a pivot then placing it at its correct place then divding the array then smaller on the left greater on the right and then diving those parts and placing elements at their correct place using the parts of the arrays untill we get the sorted array
         if (low < high) {
 
             int pivotIndex = Partition(arr, low, high);
@@ -155,6 +160,7 @@ public class Sorting {
         }
 
     }
+    
     public static int Partition(int[] arr, int low, int high){
         int pivot = arr[low];
         int i = low;
