@@ -6,4 +6,4 @@ A revision log for revising the questions I have done on the different topic in 
 | :--- | :---: |
 |Sorting|7|
 |Arrays|40|
-|Binary Search|3|
+|Binary Search|4|
